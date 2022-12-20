@@ -53,7 +53,15 @@ pipeline {
                 }
             } 
         }
-      }      
+      }
+	    
+    stage('Newman') {
+      steps{
+        script {
+          sh 'newman run /home/jenkins/newman_collection.json'
+        }
+      }
+    }
       
     }
 }
