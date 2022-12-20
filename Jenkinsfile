@@ -58,7 +58,7 @@ pipeline {
     stage('Newman') {
       steps{
         script {
-          sh 'newman run /home/jenkins/newman_collection.json'
+          sh 'newman run /var/lib/jenkins/newman_collection.json'
         }
       }
     }
