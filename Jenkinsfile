@@ -58,6 +58,7 @@ pipeline {
     stage('Newman') {
       steps{
         script {
+          sh 'sleep 30'
           sh 'newman run /var/lib/jenkins/newman_collection.json'
         }
       }
